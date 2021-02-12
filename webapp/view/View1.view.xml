@@ -1,0 +1,31 @@
+<mvc:View
+    controllerName="project2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+					<Button text="Button Control" id="FirstButton"></Button>
+					<Button id="pressMeButton" text="Press me" press="onPress" visible="true"/>
+					<Button id="pressMeButton3" text="Third Button" press="onPress3" visible="true"/>
+
+					<Select
+						id="mySelect"
+						items="{
+							path: '/Order_Details'
+							
+						}">
+					<core:Item key="{ProductId}" text="{ProductId}" />
+				</Select>
+				<Input id="myInput" value=""></Input>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
